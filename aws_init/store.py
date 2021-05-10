@@ -25,4 +25,4 @@ if __name__ == '__main__':
 
     for key in image_urls.keys():
         with requests.get(image_urls[key], stream=True) as r:
-            upload_image_s3('cc-music-images-s3663431', r.raw, key + '.jpg')
+            upload_image_s3('cc-music-images', r.raw, key + '.jpg')
